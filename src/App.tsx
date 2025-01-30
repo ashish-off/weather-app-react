@@ -38,7 +38,6 @@ const App = () => {
       );
       const data = await res.json();
       setWeatherData(data);
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -53,7 +52,6 @@ const App = () => {
       setWeatherData(null);
     }
     setCity(e.target.value);
-    console.log(e.target.value);
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -83,14 +81,13 @@ const App = () => {
     <>
       <div className="text-center">
         <div className="bg-black bg-gradient-to-tr from-cyan-500 to-blue-500  w-full h-[600px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center rounded-lg sm:w-[550px] sm:h-[650px]">
-
           <h1 className="text-white mt-20 opacity-70 text-xl font-normal">
             {currentDate.month} {currentDate.day}, {currentDate.year}
           </h1>
           {weatherData ? (
             <div>
               <h2 className="my-5 text-4xl sm:text-5xl font-bold text-white">
-              {weatherData?.name || "unknown city ..."}
+                {weatherData?.name || "unknown city ..."}
               </h2>
 
               <img
@@ -105,16 +102,16 @@ const App = () => {
               </h2>
 
               <h2 className=" text-white text-lg mt-1 opacity-90">
-                {weatherData?.weather?.[0]?.main || "---"}, feels like  {weatherData?.main?.feels_like || "-"}°C
+                {weatherData?.weather?.[0]?.main || "---"}, feels like{" "}
+                {weatherData?.main?.feels_like || "-"}°C
               </h2>
             </div>
-          ) :
-          (
+          ) : (
             <div>
               <h1 className="text-4xl sm:text-5xl text-white font-bold my-5 ">
                 Weather App
               </h1>
-          
+
               <img
                 className="my-4 mx-auto"
                 width={180}
@@ -126,10 +123,6 @@ const App = () => {
               </h1>
             </div>
           )}
-
-
-          
-
 
           <form
             onSubmit={handleSubmit}
