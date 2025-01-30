@@ -49,3 +49,7 @@ A simple weather application built with **React & TypeScript**, utilizing the **
 
 This app uses the **[OpenWeather API](https://openweathermap.org/)** to fetch weather data. The API key used is from the free tier, making it accessible without additional setup.
 
+## DEMO
+
+![Image](https://github.com/user-attachments/assets/ab12e5ed-ca86-4c83-9a77-505e31d0e102)
+
