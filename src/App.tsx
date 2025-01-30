@@ -89,12 +89,12 @@ const App = () => {
           </h1>
           {weatherData ? (
             <div>
-              <h2 className="mt-4 text-4xl font-bold text-white">
+              <h2 className="my-5 text-4xl sm:text-5xl font-bold text-white">
               {weatherData?.name || "unknown city ..."}
               </h2>
 
               <img
-                className="mt-4 mx-auto"
+                className="my-4 mx-auto"
                 src={getWeatherIconUrl(weatherData?.weather?.[0]?.main)}
                 alt="weather picture"
                 width={180}
@@ -104,7 +104,7 @@ const App = () => {
                 {weatherData?.main?.temp || "-"}°C
               </h2>
 
-              <h2 className=" text-white text-lg">
+              <h2 className=" text-white text-lg mt-1 opacity-90">
                 {weatherData?.weather?.[0]?.main || "---"}, feels like  {weatherData?.main?.feels_like || "-"}°C
               </h2>
             </div>
@@ -136,13 +136,13 @@ const App = () => {
             className="flex justify-center items-center mt-12"
           >
             <input
-              className="p-3 sm:px-12 rounded-l-md bg-gray-200 transition-all duration-150 border-none focus:outline focus:outline-gray-300 focus:bg-gray-200 focus:shadow-xl "
+              className="text-gray-700 p-3 sm:px-12 rounded-l-md bg-gray-200 transition-all duration-150 border-none focus:outline focus:outline-gray-300 focus:bg-gray-200 focus:shadow-xl "
               type="text"
               placeholder="Search City..."
               onChange={handleInputChange}
             />
             <button
-              className="text-black p-3 text-base cursor-pointer border-1 border-none transition-all duration-150
+              className="text-gray-700 font-semibold p-3 text-base cursor-pointer border-1 border-none transition-all duration-150
 rounded-r-md bg-gray-200 active:text-gray-600 active:shadow-xl active:bg-gray-400"
               type="submit"
             >
